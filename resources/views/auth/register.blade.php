@@ -1,14 +1,48 @@
-@extends('layouts.app')
-
+@extends('layouts.site.master')
+@section('title',  'Criar uma conta')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<div class="page-header" style="background-image: url('{{ asset('site') }}/assets/img/federico-beccari.jpg');">
+    <div class="filter"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 ml-auto mr-auto">
+          <div class="card card-register bg-dark">
+            <h3 class="title mx-auto">Criar uma conta</h3>
+            <form class="register-form" method="POST" action="{{ route('login') }}">
+              @csrf
+              <div class="form-group row ">
+                <label>E-mail</label>
+                <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Seu E-mail" >
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+              </div>
+              <div class="form-group row">
+                <label>Senha</label>
+                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Sua Senha">
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+              </div>
+              <button type="submit" class="btn btn-danger btn-block btn-round">Entrar</button>
+            </form>
+            <div class="forgot">
+              <a href="{{ route('password.request') }}" class="btn btn-link btn-danger">Esqueceu sua senha?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+@endsection
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+{{-- 
+
+    <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -69,9 +103,4 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+--}}

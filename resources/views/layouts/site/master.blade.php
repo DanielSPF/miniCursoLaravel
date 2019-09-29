@@ -26,10 +26,12 @@
   
 </head>
 
-<body class="landing-page sidebar-collapse"  id="inicio">
+<body class="sidebar-collapse"  id="inicio">
   {{-- Incluindo o Navbar --}}
-  @include('layouts.site.parts.navbar')
-  
+  @if (Route::currentRouteName() == 'welcome')
+    @include('layouts.site.parts.navbar')  
+  @endif
+
   @yield('content')
 
   @include('layouts.site.parts.footer')
