@@ -20,7 +20,7 @@
               @csrf
               <div class="form-group row ">
                 <div class="col-12 col-sm-12 col-md-4">
-                    <label>Primeiro nome</label>
+                    <label>Primeiro nome <span class="text-danger">*</span></label>
                     <input id="first_name" placeholder="Seu primeiro nome" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
                     @error('first_name')
                         <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
                     @enderror
                 </div>
                 <div class="col-12 col-sm-12 col-md-8">
-                    <label>Sobrenome</label>
+                    <label>Sobrenome <span class="text-danger">*</span></label>
                     <input id="last_name" placeholder="Seu sobrenome" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
                     @error('last_name')
                         <span class="invalid-feedback" role="alert">
@@ -40,7 +40,7 @@
               </div>
               <div class="form-group row ">
                <div class="col-md-6">
-                <label>E-mail</label>
+                <label>E-mail <span class="text-danger">*</span></label>
                 <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Seu E-mail" >
                 @error('email')
                     <span class="invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
                 @enderror
                </div>
                <div class="col-md-6">
-                <label>Confirme seu E-mail</label>
+                <label>Confirme seu E-mail <span class="text-danger">*</span></label>
                 <input type="email" class="form-control @error('email_confirmation') is-invalid @enderror" name="email_confirmation" required  placeholder="Confirme seu E-mail" >
                 @error('email_confirmation')
                     <span class="invalid-feedback" role="alert">
@@ -60,7 +60,7 @@
               </div>
               <div class="form-group row">
                 <div class="col-md-6">
-                    <label>Endereço</label>
+                    <label>Endereço <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" placeholder="Seu Endereço" >
                     @error('address')
                         <span class="invalid-feedback" role="alert">
@@ -69,7 +69,7 @@
                     @enderror
                 </div>
                 <div class="col-md-3">
-                    <label>Cidade</label>
+                    <label>Cidade <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('city') is-invalid @enderror" name="city" required placeholder="Sua cidade">
                     @error('city')
                         <span class="invalid-feedback" role="alert">
@@ -78,7 +78,7 @@
                     @enderror
                 </div>
                 <div class="col-md-3">
-                    <label>Estado</label>
+                    <label>Estado <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('state') is-invalid @enderror" name="state" required maxlength="2" style="text-transform:uppercase;" placeholder="Ex: MG">
                     @error('state')
                         <span class="invalid-feedback" role="alert">
@@ -100,7 +100,7 @@
               </div>
               <div class="form-group row">
                 <div class="col-md-6">
-                    <label>Senha</label>
+                    <label>Senha <span class="text-danger">*</span></label>
                     <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Sua Senha">
                     @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -109,9 +109,9 @@
                     @enderror
                 </div>
                 <div class="col-md-6">
-                    <label>Confirme sua Senha</label>
+                    <label>Confirme sua Senha <span class="text-danger">*</span></label>
                     <input id="password-confirm" placeholder="Confirme sua senha" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                    @error('password')
+                    @error('password_confirmation')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
