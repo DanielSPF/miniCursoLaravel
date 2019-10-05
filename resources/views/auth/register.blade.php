@@ -1,18 +1,46 @@
 @extends('layouts.site.master')
 @section('title',  'Criar uma conta')
+@push('css')
+    <link rel="stylesheet" href="{{ asset('site') }}/assets/css/custom.css">
+@endpush
 @section('content')
 <div class="page-header" style="background-image: url('{{ asset('site') }}/assets/img/federico-beccari.jpg');">
     <div class="filter"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 ml-auto mr-auto">
+        <div class="col-lg-8 ml-auto mr-auto">
           <div class="card card-register bg-dark">
+            <div class="text-center">
+                <a href="{{ route('site') }}" rel="tooltip" title="Voltar para o site" data-placement="bottom">
+                    <img src="{{ asset('site') }}/assets/img/logotype.min.svg"  alt="Logo">
+                </a>
+            </div>
             <h3 class="title mx-auto">Criar uma conta</h3>
-            <form class="register-form" method="POST" action="{{ route('login') }}">
+            <form class="register-form" method="POST" action="{{ route('register') }}">
               @csrf
               <div class="form-group row ">
+                <div class="col-12 col-sm-12 col-md-4">
+                    <label>Primeiro nome</label>
+                    <input id="first_name" placeholder="Seu primeiro nome" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
+                    @error('first_name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="col-12 col-sm-12 col-md-8">
+                    <label>Sobrenome</label>
+                    <input id="last_name" placeholder="Seu sobrenome" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
+                    @error('last_name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+              </div>
+              <div class="form-group row ">
                 <label>E-mail</label>
-                <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Seu E-mail" >
+                <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Seu E-mail" >
                 @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>

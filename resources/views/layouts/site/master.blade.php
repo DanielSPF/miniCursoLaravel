@@ -28,7 +28,7 @@
 
 <body class="sidebar-collapse"  id="inicio">
   {{-- Incluindo o Navbar --}}
-  @if (Route::currentRouteName() == 'welcome')
+  @if (Route::currentRouteName() == 'site')
     @include('layouts.site.parts.navbar')  
   @endif
 
@@ -45,22 +45,22 @@
 
   <script>
     $(document).ready(function(){
-
+        // Selecione o item do menu com # e adiciono o evento click
         $('nav a[href^="#"]').on('click', function(e){
-
+            // Previno a ação default do click
             e.preventDefault();
-
+            // Pego o id do item clicado
             var id = $(this).attr('href'), 
-            targetOffset = $(id).offset().top;
+            targetOffset = $(id).offset().top; // Calculo a distancia ate o topo
 
-            $('html, body').animate({
+            $('html, body').animate({ // Adiciono a animação
                 scrollTop: targetOffset - 15
             }, 800);
 
 
-        });
+        }); // end nav
 
-    });
+    }); // end document
   </script>
 
   @stack('js')
