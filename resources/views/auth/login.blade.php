@@ -1,5 +1,8 @@
 @extends('layouts.site.master')
 @section('title', 'Entrar')
+@push('css')
+    <link rel="stylesheet" href="{{ asset('site') }}/assets/css/custom.css">
+@endpush
 @section('content')
 <div class="page-header" style="background-image: url('{{ asset('site') }}/assets/img/login-image.jpg');">
     <div class="filter"></div>
@@ -22,6 +25,13 @@
               <a href="#" class="btn btn-neutral btn-twitter btn-just-icon">
                 <i class="fa fa-twitter"></i>
               </a>
+            </div>
+            <div class="text-center text-white mt-2 ">
+                <small>
+                        Entrar com as seguintes credenciais:
+                        <br>
+                        E-mail: <strong>admin@laravel.com</strong> Senha: <strong>secret</strong>
+                </small>
             </div>
             <form class="register-form" method="POST" action="{{ route('login') }}">
               @csrf
@@ -69,8 +79,13 @@
                 </div>
               <button type="submit" class="btn btn-danger btn-block btn-round">Entrar</button>
             </form>
-            <div class="forgot">
-              <a href="{{ route('password.request') }}" class="btn btn-link btn-danger">Esqueceu sua senha?</a>
+            <div class="forgot row">
+              <div class="col-md-6">
+                  <a href="{{ route('register') }}" class="btn btn-link btn-danger">Criar uma conta</a>
+              </div>
+              <div class="col-md-6">
+                  <a href="{{ route('password.request') }}" class="btn btn-link btn-danger">Esqueceu sua senha?</a>
+              </div>
             </div>
           </div>
         </div>

@@ -79,7 +79,7 @@
                 </div>
                 <div class="col-md-3">
                     <label>Estado <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control @error('state') is-invalid @enderror" name="state" required maxlength="2" style="text-transform:uppercase;" placeholder="Ex: MG">
+                    <input type="text" class="form-control text-uppercase @error('state') is-invalid @enderror" name="state" required maxlength="2" placeholder="Ex: MG">
                     @error('state')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -89,8 +89,8 @@
               </div>
               <div class="form-group row">
                 <div class="col-md-12">
-                    <label>Fale um pouco sobre você (Opcional)</label>
-                    <textarea class="form-control textarea @error('about_me') is-invalid @enderror" maxlength="200"  name="about_me"></textarea>
+                    <label>Sobre você (Opcional)</label>
+                    <textarea placeholder="Fale um pouco sobre você" class="form-control textarea @error('about_me') is-invalid @enderror" maxlength="200"  name="about_me"></textarea>
                     @error('about_me')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
