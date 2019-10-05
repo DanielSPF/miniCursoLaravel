@@ -25,7 +25,7 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 - Models, Migrations e Seeders.
 - Projeto Site OnePage e Sistema com Gestão de Usuários.
 
-## Qual stack necessária
+### Qual stack necessária
 
 - PHP 7
 - Mysql
@@ -33,7 +33,7 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 - Composer
 - Git
 
-## Como rodar o projeto na sua máquina
+### Como rodar o projeto na sua máquina
 
 - Clone o projeto
     - git clone https://github.com/DanielSPF/miniCursoLaravel.git
