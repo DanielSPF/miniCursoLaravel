@@ -15,7 +15,7 @@
                     <img src="{{ asset('site') }}/assets/img/logotype.min.svg"  alt="Logo">
                 </a>
             </div>
-            <h3 class="title mx-auto">Criar uma conta</h3>
+            <h3 class="title mx-auto">@yield('title')</h3>
             <form class="register-form" method="POST" action="{{ route('register') }}">
               @csrf
               <div class="form-group row ">

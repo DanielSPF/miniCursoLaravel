@@ -13,7 +13,7 @@
             ©
             <script>
               document.write(new Date().getFullYear())
-            </script>, made with <i class="fa fa-heart heart"></i> by Minicurso Laravel
+            </script>, feito com <i class="fa fa-heart heart"></i> por Minicurso Laravel
           </span>
         </div>
       </div>
