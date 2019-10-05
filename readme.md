@@ -13,13 +13,17 @@
 
 Minicurso ministrado na IV semana de integração do DCC da Universidade Estadual De Montes Claros (UNIMONTES). O projeto introduz os principais conceitos utilizados pelo framework.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Roteiro
+
+- Por que Laravel?
+- MVC - Revisão.
+- Instalando o Laravel 6.x.
+- Estrutura do framework.
+- Routes.
+- Controllers.
+- Views.
+- Models, Migrations e Seeders.
+- Projeto Site OnePage e Sistema com Gestão de Usuários.
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
