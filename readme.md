@@ -9,7 +9,9 @@
 
 ## Minicurso Criação de Sites e Sistemas com Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Academicos responsáveis: [Matheus Honorato](https://github.com/MatheusHonorato) e [Daniel Porto](https://github.com/DanielSPF)
+
+Minicurso ministrado na IV semana de integração do DCC da Universidade Estadual De Montes Claros (UNIMONTES). O projeto introduz os principais conceitos utilizados pelo framework.
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
