@@ -6,9 +6,6 @@
             <li>
               <a class="text-white" href="#" >Minicurso Laravel</a>
             </li>
-            <li>
-              <a class="text-white" href="#" >Blog</a>
-            </li>
           </ul>
         </nav>
         <div class="credits ml-auto">
