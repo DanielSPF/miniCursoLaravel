@@ -48,54 +48,23 @@ The above copyright notice and this permission notice shall be included in all c
     @include('layouts.dashboard.parts.sidebar')
 
     <div class="main-panel">
+      
       {{-- Inclui o navbar --}}
       @include('layouts.dashboard.parts.navbar')
-      {{-- Inclui o conteudo --}}
-      @yield('content')
+      
+      <div class="content">
+        
+        {{-- Inclui o conteudo --}}
+        @yield('content') 
+
+      </div>
+
       {{-- Inclui o footer --}}
       @include('layouts.dashboard.parts.footer')
 
     </div>
 
   </div>
-
-  <div class="fixed-plugin">
-      <div class="dropdown show-dropdown">
-        <a href="#" data-toggle="dropdown" aria-expanded="false">
-          <i class="fa fa-cog fa-2x"> </i>
-        </a>
-        <ul class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(-231px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-          <li class="header-title">Menu</li>
-          <li class="adjustments-line">
-            <a id="back_color" href="javascript:void(0)" class="switch-trigger background-color">
-              <div class="badge-colors text-center">
-                <span class="badge filter badge-light @if(auth()->user()->menu_back_color == 'white') active @endif" data-color="white"></span>
-                <span class="badge filter badge-dark  @if(auth()->user()->menu_back_color == 'black') active @endif" data-color="black"></span>
-              </div>
-              <div class="clearfix"></div>
-            </a>
-          </li>
-          <li class="header-title">Menu ativo</li>
-          <li class="adjustments-line text-center">
-            <a id="active_color" href="javascript:void(0)" class="switch-trigger active-color">
-            <span class="badge filter badge-primary @if(auth()->user()->menu_active_color == 'primary') active @endif" data-color="primary"></span>
-              <span class="badge filter badge-info @if(auth()->user()->menu_active_color == 'info') active @endif" data-color="info"></span>
-              <span class="badge filter badge-success  @if(auth()->user()->menu_active_color == 'success') active @endif" data-color="success"></span>
-              <span class="badge filter badge-warning  @if(auth()->user()->menu_active_color == 'warning') active @endif" data-color="warning"></span>
-              <span class="badge filter badge-danger  @if(auth()->user()->menu_active_color == 'danger') active @endif" data-color="danger"></span>
-            </a>
-          </li>
-          <li class="button-container">
-            <a href="#" onclick="chanceColors(event)" class="btn btn-success btn-block btn-round"> <i class="fa fa-save"></i> Salvar</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <form id="form_colors" action="{{ route('chance.colors') }}" method="post" style="display:none">
-      @csrf
-      <input id="back_color" value="" name="back_color" type="text">
-      <input id="active_color"  value="" name="active_color" type="text">
-    </form>
 
   <!--   Core JS Files   -->
   <script src="{{ asset('dashboard') }}/assets/js/core/jquery.min.js"></script>
@@ -119,18 +88,6 @@ The above copyright notice and this permission notice shall be included in all c
       demo.initChartsPages();
 
     });
-
-    // função que altera as cores do layout
-    function chanceColors(e) {
-
-      e.preventDefault();
-      var back_color = $('#back_color>div>.active').attr('data-color');
-      var active_color = $('#active_color>.active').attr('data-color');
-      $('input[name="back_color"]').val(back_color);
-      $('input[name="active_color"]').val(active_color);
-      $('#form_colors').submit();
-
-    }
   </script>
 
   @if (session('success'))

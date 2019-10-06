@@ -22,6 +22,10 @@ Route::get('/', function () {
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.'], function(){
     
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/membros', 'MembersController@index')->name('members');
+    Route::get('/administradores', 'ManagersController@index')->name('managers');
+    // Perfil
+    Route::get('/perfil', 'ProfileController@index')->name('profile');
 
 });
 
@@ -29,10 +33,13 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin', 'prefix
 Route::group(['middleware' => ['auth', 'member'], 'namespace' => 'Member', 'prefix' => 'member', 'as' => 'member.'], function(){
     
     Route::get('/home', 'HomeController@index')->name('home');
+    // Perfil
+    Route::get('/perfil', 'ProfileController@index')->name('profile');
 
 });
 
-// Personaliza o painel
+// Personaliza o menu
+// * Não acho necessário criar um controller só pra isso...
 Route::post('/colors', function(Illuminate\Http\Request $request){
     
     auth()->user()->menu_back_color = $request->back_color;
@@ -56,6 +63,11 @@ Route::post('/colors', function(Illuminate\Http\Request $request){
     }
 
 })->middleware('auth')->name('chance.colors');
+
+
+Route::delete('teste', function(Illuminate\Http\Request $request){
+    dd($request->id);
+})->name('teste');
 
 // Rotas da autentificação
 Auth::routes();

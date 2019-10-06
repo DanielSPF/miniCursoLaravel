@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navigation">
     <form>
         <div class="input-group no-border">
-        <input type="text" value="" class="form-control" placeholder="Search...">
+        <input type="text" value="" class="form-control" placeholder="Pesquisar...">
         <div class="input-group-append">
             <div class="input-group-text">
             <i class="nc-icon nc-zoom-split"></i>
@@ -36,7 +36,7 @@
             </p>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#"> <i class="nc-icon nc-badge"></i> Meu perfil</a>
+            <a class="dropdown-item" href="@if(auth()->user()->is_admin) {{ route('admin.profile') }} @else {{ route('member.profile') }} @endif"> <i class="nc-icon nc-badge"></i> Meu perfil</a>
             <a class="dropdown-item"  onclick="event.preventDefault();
             document.getElementById('logout-form').submit();" href="#"> <i class="nc-icon nc-button-power"></i> Sair</a>
         </div>
