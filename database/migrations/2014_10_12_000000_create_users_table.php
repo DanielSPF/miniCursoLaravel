@@ -25,6 +25,8 @@ class CreateUsersTable extends Migration
             $table->boolean('is_admin')->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('menu_back_color', 7)->default('white');
+            $table->string('menu_active_color', 7)->default('danger');
             $table->rememberToken();
             $table->timestamps();
         });

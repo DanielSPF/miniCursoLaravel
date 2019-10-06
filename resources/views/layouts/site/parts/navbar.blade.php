@@ -28,7 +28,7 @@
             @if (Route::has('login'))
                 @auth
                     <li class="nav-item">
-                        <a href="{{ url('/home') }}" class="nav-link">Painel</a>
+                        <a href="{{ route('member.home') }}" class="nav-link">Dashboard</a>
                     </li>
                 @else
                     <li class="nav-item">
