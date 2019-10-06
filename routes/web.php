@@ -64,11 +64,6 @@ Route::post('/colors', function(Illuminate\Http\Request $request){
 
 })->middleware('auth')->name('chance.colors');
 
-
-Route::delete('teste', function(Illuminate\Http\Request $request){
-    dd($request->id);
-})->name('teste');
-
 // Rotas da autentificação
 Auth::routes();
 
