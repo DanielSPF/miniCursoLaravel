@@ -93,7 +93,7 @@
             
         </div>
         <div class="modal-footer">
-            <form action="#" method="post"> {{-- Form Delete Adm --}}
+            <form action="#" method="post"> {{-- Form Add Adm --}}
                 @csrf
                 <input type="hidden" value="" name="id">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
