@@ -25,7 +25,13 @@
     <li>
         <a href="#">
         <i class="nc-icon nc-diamond"></i>
-        <p>Usuários</p>
+        <p>Membros</p>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+        <i class="nc-icon nc-badge"></i>
+        <p>Administradores</p>
         </a>
     </li>
     </ul>
