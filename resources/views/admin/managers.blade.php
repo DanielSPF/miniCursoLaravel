@@ -67,7 +67,7 @@
             Você tem certeza que deseja <strong>excluir</strong> o administrador <br> <strong id="name_del"></strong>?
         </div>
         <div class="modal-footer text-center">
-            <form action="{{ route('teste') }}" method="post"> {{-- Form Delete Adm --}}
+            <form action="#" method="post"> {{-- Form Delete Adm --}}
                 @csrf
                 @method('DELETE')
                 <input type="hidden" value="" name="id">
@@ -81,7 +81,7 @@
 
 <!-- Modal Add Admin -->
 <div class="modal fade" id="addAdmin" tabindex="-1" role="dialog" aria-labelledby="addAdminTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
         <div class="modal-header text-center">
             <h5 class="modal-title" id="addAdminTitle"> <i class="fa fa-user-plus text-success"></i> Cadastrar Administrador</h5>
@@ -89,17 +89,104 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="modal-body">
-            
-        </div>
+        <form action="#" method="post"> {{-- Form Add Adm --}}
+            @csrf
+            <div class="modal-body">
+                <div class="form-group row ">
+                    <div class="col-12 col-sm-12 col-md-4">
+                        <label>Primeiro nome <span class="text-danger">*</span></label>
+                        <input id="first_name" placeholder="Seu primeiro nome" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
+                        @error('first_name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8">
+                        <label>Sobrenome <span class="text-danger">*</span></label>
+                        <input id="last_name" placeholder="Seu sobrenome" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
+                        @error('last_name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    </div>
+                    <div class="form-group row ">
+                    <div class="col-md-6">
+                    <label>E-mail <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Seu E-mail" >
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    </div>
+                    <div class="col-md-6">
+                    <label>Confirme o E-mail <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control @error('email_confirmation') is-invalid @enderror" name="email_confirmation" required  placeholder="Confirme seu E-mail" >
+                    @error('email_confirmation')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                    <div class="col-md-6">
+                        <label>Endereço <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" placeholder="Seu Endereço" >
+                        @error('address')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="col-md-3">
+                        <label>Cidade <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control @error('city') is-invalid @enderror" name="city" required placeholder="Sua cidade">
+                        @error('city')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="col-md-3">
+                        <label>Estado <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control text-uppercase @error('state') is-invalid @enderror" name="state" required maxlength="2" placeholder="Ex: MG">
+                        @error('state')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label>Senha <span class="text-danger">*</span></label>
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Sua Senha">
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="col-md-6">
+                            <label>Confirme a Senha <span class="text-danger">*</span></label>
+                            <input id="password-confirm" placeholder="Confirme sua senha" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            @error('password_confirmation')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                    </div>
+            </div>
         <div class="modal-footer">
-            <form action="#" method="post"> {{-- Form Add Adm --}}
-                @csrf
-                <input type="hidden" value="" name="id">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                <button type="submit" class="btn btn-success">Cadastrar</button>
-            </form> {{-- end Form --}}
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
         </div>
+        </form> {{-- end Form --}}
         </div>
     </div>
 </div>
