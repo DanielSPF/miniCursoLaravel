@@ -43,6 +43,8 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
     - Se estiver utilizando linux: cp .env.example .env
     - Se estiver no windows abra o arquivo em um editor de código e o salve novamente     como .env
 - Crie uma nova chave para a aplicação
+    - php artisan key:generate
+- Rode as migrations
     - php artisan migrate --seed
 ## License
 
