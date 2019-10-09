@@ -53,7 +53,7 @@
                 <h5 class="card-title"><i class="nc-icon nc-circle-10"></i> Editar Perfil</h5>
             </div>
             <div class="card-body">
-                <form action="#" method="POST"> {{-- Form Update Profile --}}
+                <form action="{{ route('admin.profile.update') }}" method="POST"> {{-- Form Update Profile --}}
                     @csrf
                     @method('PUT')
                     <div class="form-group row ">
@@ -79,7 +79,7 @@
                         <div class="form-group row ">
                         <div class="col-md-4">
                         <label>E-mail <span class="text-danger">*</span></label>
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Seu E-mail" >
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email" placeholder="Seu E-mail" >
                         @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -88,7 +88,7 @@
                         </div>
                         <div class="col-md-8">
                             <label>Endereço <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" placeholder="Seu Endereço" >
+                            <input type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ $user->address }}" required autocomplete="address" placeholder="Seu Endereço" >
                             @error('address')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -99,7 +99,7 @@
                         <div class="form-group row">
                         <div class="col-md-4">
                             <label>Cidade <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control @error('city') is-invalid @enderror" name="city" required placeholder="Sua cidade">
+                            <input type="text" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ $user->city }}" required placeholder="Sua cidade">
                             @error('city')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -108,7 +108,7 @@
                         </div>
                         <div class="col-md-3">
                             <label>Estado <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control text-uppercase @error('state') is-invalid @enderror" name="state" required maxlength="2" placeholder="Ex: MG">
+                            <input type="text" class="form-control text-uppercase @error('state') is-invalid @enderror" name="state" value="{{ $user->state }}" required maxlength="2" placeholder="Ex: MG">
                             @error('state')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -119,7 +119,7 @@
                         <div class="form-group row">
                         <div class="col-md-12">
                             <label>Sobre você (Opcional)</label>
-                            <textarea placeholder="Fale um pouco sobre você" class="form-control textarea @error('about_me') is-invalid @enderror" maxlength="200"  name="about_me"></textarea>
+                            <textarea placeholder="Fale um pouco sobre você" class="form-control textarea @error('about_me') is-invalid @enderror" maxlength="200"  name="about_me">{{ $user->about_me }}</textarea>
                             @error('about_me')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
