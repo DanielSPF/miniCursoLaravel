@@ -27,29 +27,24 @@
                         <th class="text-center">Ações</th>
                     </thead>
                     <tbody>
-                {{-- @foreach ($collection as $item) --}}
-                        <tr> {{-- Preciso desse id --}}
-                            <td>Cont++</td>
-                            <td>Daniel Souza Porto Filho</td>
-                            <td>danielfilho.web@gmail.com</td>
-                            <td>Rua ficticia de algum bairro</td>
-                            <td>Montes Claros</td>
-                            <td>MG</td>
+                    @foreach ($users as $user)
+                        <tr> 
+                            <td>{{ $user->id }}</td>
+                            <td>{{ $user->first_name }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->address }}</td>
+                            <td>{{ $user->city }}</td>
+                            <td>{{ $user->state }}</td>
                             <td class="text-center">
-                                {{-- se o usuário não for igual ao auteticado deixa 
-                                     exluir e se for desativa o botão --}}
-                                     @php
-                                         // Só pra teste
-                                         $id = 3;
-                                         $name = 'Daniel Souza Porto Filho';
-                                     @endphp
-                                {{-- Passar o id ($item->id) e o nome $item->first_name + $item->last_name da linha --}}
-                                <button type="button" data-toggle="modal" onclick="actionDelUser({{ $id }}, '{{ $name }}')" class="btn btn-icon btn-sm btn-round btn-danger"><i class="fa fa-times"></i></button>
+                            @if(Auth::user()->id == $user->id)
+                                <button type="button" data-toggle="modal" onclick="actionDelUser({{ $user->id }}, '{{ $user->first_name }}')" class="btn btn-icon btn-sm btn-round btn-danger"><i class="fa fa-times"></i></button>
+                            @endif
                             </td>
                         </tr>
-                {{-- @endforeach --}}
+                    @endforeach
                     </tbody>
                 </table>
+                {{ $users->links() }}
             </div>
         </div>
     </div>

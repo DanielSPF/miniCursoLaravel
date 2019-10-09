@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\User;
+
 class MembersController extends Controller
 {
     /**
@@ -14,7 +16,9 @@ class MembersController extends Controller
      */
     public function index()
     {
-        return view('admin.members');
+        $users = User::paginate(10);
+
+        return view('admin.members', compact('users'));
     }
 
     /**
