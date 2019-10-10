@@ -47,7 +47,7 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 ## Como rodar o projeto na sua máquina
 
 - Clone o projeto
-    - ˋgit clone https://github.com/DanielSPF/miniCursoLaravel.gitˋ
+    - git clone https://github.com/DanielSPF/miniCursoLaravel.git
 - Intale as dependências e o framework
     - composer install --no-scripts
 - Copie o arquivo .env.example
