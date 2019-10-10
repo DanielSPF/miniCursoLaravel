@@ -13,6 +13,16 @@
 
 Minicurso ministrado na IV semana de integração do DCC da Universidade Estadual De Montes Claros (UNIMONTES). O projeto introduz os principais conceitos utilizados pelo framework.
 
+### Previews
+
+| Site | Dashboard |
+| --- | --- |
+| [![Paper Kit  HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-html/opt_pk2_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2)  | [![Paper Kit  Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-angular/opt_pk2_angular_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2-angular)  
+
+| Register | Login | Profile  |
+| --- | --- | ---  |
+| [![Register Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/register-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/register-page.html)  | [![Landing Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/landing-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/landing-page.html)  | [![Profile Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/profile-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/profile-page.html)  
+
 ### Roteiro
 
 - Por que Laravel?
@@ -46,6 +56,27 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
     - php artisan key:generate
 - Rode as migrations
     - php artisan migrate --seed
-## License
+
+### Recursos utilizados
+
+#### Templates
+- [Site Oficial - Paper Kit 2](https://www.creative-tim.com/product/paper-kit-2)
+- [GitHub - Paper Kit 2](https://github.com/creativetimofficial/paper-kit-2)
+- [Site Oficial - Paper Dashbaord 2](https://www.creative-tim.com/product/paper-dashboard-2)
+- [GitHub - Paper Dashboard 2](https://github.com/creativetimofficial/paper-dashboard)
+
+#### Ferramentas/Frameworks
+- [Font-awesome](https://fontawesome.com)
+- [Bootstrap v4](https://getbootstrap.com)
+
+#### Plugins
+- [Perfect-scrollbar](https://github.com/mdbootstrap/perfect-scrollbar)
+- [Chart JS](https://www.chartjs.org)
+- [Bootstrap-notify](http://bootstrap-notify.remabledesigns.com)
+
+#### Pacotes Laravel
+- [Localização pt_BR](https://github.com/esjdev/laravel-5.7-ptBR-localization)
+
+### License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).

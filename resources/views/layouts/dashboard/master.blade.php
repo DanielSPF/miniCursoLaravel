@@ -1,18 +1,3 @@
-<!--
-=========================================================
- Paper Dashboard 2 - v2.0.0
-=========================================================
-
- Product Page: https://www.creative-tim.com/product/paper-dashboard-2
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/paper-dashboard/blob/master/LICENSE)
-
- Coded by Creative Tim
-
-=========================================================
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -71,8 +56,6 @@ The above copyright notice and this permission notice shall be included in all c
   <script src="{{ asset('dashboard') }}/assets/js/core/popper.min.js"></script>
   <script src="{{ asset('dashboard') }}/assets/js/core/bootstrap.min.js"></script>
   <script src="{{ asset('dashboard') }}/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chart JS -->
   <script src="{{ asset('dashboard') }}/assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
