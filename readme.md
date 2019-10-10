@@ -1,3 +1,5 @@
+# Minicurso Criação de Sites e Sistemas com Laravel
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
@@ -7,13 +9,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Minicurso Criação de Sites e Sistemas com Laravel
-
-### Academicos responsáveis: [Matheus Honorato](https://github.com/MatheusHonorato) e [Daniel Porto](https://github.com/DanielSPF)
+## Academicos responsáveis: [Matheus Honorato](https://github.com/MatheusHonorato) e [Daniel Porto](https://github.com/DanielSPF)
 
 Minicurso ministrado na IV semana de integração do DCC da Universidade Estadual De Montes Claros (UNIMONTES). O projeto introduz os principais conceitos utilizados pelo framework.
 
-### Previews
+## Previews
 
 | Site | Dashboard |
 | --- | --- |
@@ -23,7 +23,7 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 | --- | --- | ---  |
 | [![Register Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/register-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/register-page.html)  | [![Landing Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/landing-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/landing-page.html)  | [![Profile Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/profile-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/profile-page.html)  
 
-### Roteiro
+## Roteiro
 
 - Por que Laravel?
 - MVC - Revisão.
@@ -35,7 +35,7 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 - Models, Migrations e Seeders.
 - Projeto Site OnePage e Sistema com Gestão de Usuários.
 
-### Qual stack necessária
+## Qual stack necessária
 
 - PHP 7
 - Mysql
@@ -43,7 +43,7 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 - Composer
 - Git
 
-### Como rodar o projeto na sua máquina
+## Como rodar o projeto na sua máquina
 
 - Clone o projeto
     - git clone https://github.com/DanielSPF/miniCursoLaravel.git
@@ -57,26 +57,26 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 - Rode as migrations
     - php artisan migrate --seed
 
-### Recursos utilizados
+## Recursos utilizados
 
-#### Templates
+### Templates
 - [Site Oficial - Paper Kit 2](https://www.creative-tim.com/product/paper-kit-2)
 - [GitHub - Paper Kit 2](https://github.com/creativetimofficial/paper-kit-2)
 - [Site Oficial - Paper Dashbaord 2](https://www.creative-tim.com/product/paper-dashboard-2)
 - [GitHub - Paper Dashboard 2](https://github.com/creativetimofficial/paper-dashboard)
 
-#### Ferramentas/Frameworks
+### Ferramentas/Frameworks
 - [Font-awesome](https://fontawesome.com)
 - [Bootstrap v4](https://getbootstrap.com)
 
-#### Plugins
+### Plugins
 - [Perfect-scrollbar](https://github.com/mdbootstrap/perfect-scrollbar)
 - [Chart JS](https://www.chartjs.org)
 - [Bootstrap-notify](http://bootstrap-notify.remabledesigns.com)
 
-#### Pacotes Laravel
+### Pacotes Laravel
 - [Localização pt_BR](https://github.com/esjdev/laravel-5.7-ptBR-localization)
 
-### License
+## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
