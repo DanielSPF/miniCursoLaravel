@@ -18,7 +18,7 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 
 | Site | Dashboard |
 | --- | --- |
-| [![Site](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-site.PNG)] | [![Dashboard](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-dashboard.PNG)]
+| [![Site](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-site.PNG)](#) | [![Dashboard](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-dashboard.PNG)](#)
 
 | Register | Login | Profile  |
 | --- | --- | ---  |
