@@ -15,7 +15,8 @@ class MembersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
+        // ! Precisa pegar somente membros não admin
         $users = User::paginate(10);
 
         return view('admin.members', compact('users'));
