@@ -18,11 +18,11 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 
 | Site | Dashboard |
 | --- | --- |
-| [![Site](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-site.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-site.PNG) | [![Dashboard](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-dashboard.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-dashboard.PNG)
+| [![Site](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-site.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-site.PNG){:target="_blank"} | [![Dashboard](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-dashboard.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-dashboard.PNG){:target="_blank"}
 
 | Register | Login | Profile  |
 | --- | --- | ---  |
-| [![Register](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-register.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-register.PNG)  | [![Login](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-login.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-login.PNG)  | [![Profile](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-profile.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-profile.PNG)  
+| [![Register](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-register.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-register.PNG){:target="_blank"}  | [![Login](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-login.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-login.PNG){:target="_blank"}  | [![Profile](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-profile.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-profile.PNG){:target="_blank"}  
 
 ## Roteiro
 
