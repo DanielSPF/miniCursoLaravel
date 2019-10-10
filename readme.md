@@ -1,4 +1,3 @@
-# Minicurso Criação de Sites e Sistemas com Laravel
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
@@ -8,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
-
+<div align="center"> # Minicurso Criação de Sites e Sistemas com Laravel </div>
 ## Academicos responsáveis: [Matheus Honorato](https://github.com/MatheusHonorato) e [Daniel Porto](https://github.com/DanielSPF)
 
 Minicurso ministrado na IV semana de integração do DCC da Universidade Estadual De Montes Claros (UNIMONTES). O projeto introduz os principais conceitos utilizados pelo framework.
