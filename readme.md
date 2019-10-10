@@ -18,7 +18,7 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 
 | Site | Dashboard |
 | --- | --- |
-| [![Paper Kit  HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-html/opt_pk2_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2)  | [![Paper Kit  Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-angular/opt_pk2_angular_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2-angular)  
+| [![Site](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-site.PNG)] | [![Dashboard](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-dashboard.PNG)]
 
 | Register | Login | Profile  |
 | --- | --- | ---  |
