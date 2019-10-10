@@ -27,6 +27,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin', 'prefix
     // Perfil
     Route::get('/perfil', 'ProfileController@index')->name('profile');
 
+    Route::put('/perfil', 'ProfileController@update')->name('profile.update');
+
 });
 
 // Grupo de Rotas do Member

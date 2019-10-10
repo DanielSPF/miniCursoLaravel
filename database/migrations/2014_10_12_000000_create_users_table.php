@@ -18,9 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('first_name', 20);
             $table->string('last_name', 100);
             $table->string('email')->unique();
-            $table->string('address');
-            $table->string('city', 30);
-            $table->string('state', 2);
+            $table->string('address')->default('');
+            $table->string('city', 30)->default('');
+            $table->string('state', 2)->default('');
             $table->string('about_me', 200)->nullable();
             $table->boolean('is_admin')->default(false);
             $table->timestamp('email_verified_at')->nullable();

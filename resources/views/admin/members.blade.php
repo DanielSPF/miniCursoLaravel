@@ -19,18 +19,19 @@
                             <th>Estado</th>
                         </thead>
                         <tbody>
-                    {{-- @foreach ($collection as $item) --}}
+                        @foreach ($users as $user)
                            <tr>
-                                <td>Cont++</td>
-                                <td>Daniel Souza Porto Filho</td>
-                                <td>danielfilho.web@gmail.com</td>
-                                <td>Rua ficticia de algum bairro</td>
-                                <td>Montes Claros</td>
-                                <td>MG</td>
+                                <td>{{ $user->id }}</td>
+                                <td>{{ $user->first_name }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->address }}</td>
+                                <td>{{ $user->city }}</td>
+                                <td>{{ $user->state }}</td>
                             </tr>
-                    {{-- @endforeach --}}
+                        @endforeach
                         </tbody>
                     </table>
+                    {{ $users->links() }}
                 </div>
             </div>
         </div>
