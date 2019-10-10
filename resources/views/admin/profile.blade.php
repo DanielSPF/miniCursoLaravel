@@ -9,7 +9,7 @@
                 <h4 class="card-title"> <i class="nc-icon nc-key-25"></i> Alterar senha</h4>
             </div>
             <div class="card-body">
-                <form action="#" method="post"> {{-- Form Update Password --}}
+                <form action="{{ route('admin.password.update') }}" method="post"> {{-- Form Update Password --}}
                     @csrf
                     @method('PUT')
                     <div class="form-group row">

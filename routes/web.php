@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin', 'prefix
 
     Route::put('/perfil', 'ProfileController@update')->name('profile.update');
 
+    Route::put('/password', 'PasswordController@update')->name('password.update');
 });
 
 // Grupo de Rotas do Member
