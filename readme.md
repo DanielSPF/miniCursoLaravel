@@ -22,7 +22,7 @@ Minicurso ministrado na IV semana de integração do DCC da Universidade Estadua
 
 | Register | Login | Profile  |
 | --- | --- | ---  |
-| [![Register](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-register.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-register.PNG)  | [![Login](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-login.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-login.PNG)  | [![Profile](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/profile-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/profile-page.html)  
+| [![Register](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-register.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-register.PNG)  | [![Login](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-login.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-login.PNG)  | [![Profile](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-profile.PNG)](https://github.com/DanielSPF/miniCursoLaravel/blob/master/public/previews-profile.PNG)  
 
 ## Roteiro
 
