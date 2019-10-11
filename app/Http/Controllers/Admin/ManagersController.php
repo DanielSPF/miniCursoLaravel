@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 
+use Illuminate\Support\Facades\Hash;
+
 class ManagersController extends Controller
 {
     /**
@@ -39,7 +41,37 @@ class ManagersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:1000'],
+            'address' => ['string', 'max:255'], 
+            'city' => ['string', 'max:100'], 
+            'state' => ['string', 'max:100'], 
+            'password' => ['required', 'confirmed', 'string', 'min:8', 'max:30'],
+            ],[
+                'password.required' => 'Sua senha não pode ser nula.',
+                'password.min' => 'Sua senha não pode conter menos de oito caracteres.',
+                'password.max' => 'Sua senha deve conter no maximo 30 caracteres.',
+                'password.confirmed' => 'Desculpe, mas a confirmação se difere da senha.',
+                'first_name.required' => 'Por favor insira o primeiro nome.',
+                'last_name.required' => 'Por favor insira o segundo nome.',
+                'email.required' => 'O endereço de e-mail é obrigatório',
+            ]
+        );
+
+        $user = new User;
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->address = $request->address;
+        $user->city = $request->city;
+        $user->state = mb_strtoupper($request->state);
+        $user->is_admin = TRUE;
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect()->back()->with('success','Cadastro efetuado com sucesso!');
     }
 
     /**
@@ -84,7 +116,9 @@ class ManagersController extends Controller
      */
     public function destroy($id)
     {
-        User::destroy($id);
+        if(Auth::user()->id == $id){
+            User::destroy($id);
+        }
 
         return redirect()->route('site');
     }

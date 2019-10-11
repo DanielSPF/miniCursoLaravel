@@ -20,6 +20,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin', 'prefix
 
     Route::put('/password', 'PasswordController@update')->name('password.update');
 
+    Route::post('user', 'ManagersController@store')->name('profile.store');
+
     Route::get('user/delete/{id}', 'ManagersController@destroy')->name('profile.destroy');
 
 });

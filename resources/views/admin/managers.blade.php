@@ -82,7 +82,7 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <form action="#" method="post"> {{-- Form Add Adm --}}
+        <form action="{{ route('admin.profile.store') }}" method="post"> {{-- Form Add Adm --}}
             @csrf
             <div class="modal-body">
                 <div class="form-group row ">
