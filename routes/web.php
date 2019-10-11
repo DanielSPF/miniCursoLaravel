@@ -15,13 +15,9 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin', 'prefix
     Route::get('/administradores', 'ManagersController@index')->name('managers');
     // Perfil
     Route::get('/perfil', 'ProfileController@index')->name('profile');
-
     Route::put('/perfil', 'ProfileController@update')->name('profile.update');
-
     Route::put('/password', 'PasswordController@update')->name('password.update');
-
     Route::post('user', 'ManagersController@store')->name('profile.store');
-
     Route::get('user/delete/{id}', 'ManagersController@destroy')->name('profile.destroy');
 
 });
