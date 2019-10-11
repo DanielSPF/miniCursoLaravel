@@ -52,7 +52,18 @@ class RegisterController extends Controller
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'address' => ['string', 'max:255'], 
+            'city' => ['string', 'max:100'], 
+            'state' => ['string', 'max:100'], 
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ],[
+            'password.required' => 'Sua senha não pode ser nula.',
+            'password.min' => 'Sua senha não pode conter menos de oito caracteres.',
+            'password.max' => 'Sua senha deve conter no maximo 30 caracteres.',
+            'password.confirmed' => 'Desculpe, mas a confirmação se difere da senha.',
+            'first_name.required' => 'Por favor insira o primeiro nome.',
+            'last_name.required' => 'Por favor insira o segundo nome.',
+            'email.required' => 'O endereço de e-mail é obrigatório',
         ]);
     }
 
@@ -68,6 +79,9 @@ class RegisterController extends Controller
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
+            'address' => $data['address'], 
+            'city' => $data['city'], 
+            'state' => mb_strtoupper($data['state']), 
             'password' => Hash::make($data['password']),
         ]);
     }
