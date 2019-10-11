@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 // Rota do Site
 Route::get('/', function () {
 
@@ -30,6 +19,9 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin', 'prefix
     Route::put('/perfil', 'ProfileController@update')->name('profile.update');
 
     Route::put('/password', 'PasswordController@update')->name('password.update');
+
+    Route::get('user/delete/{id}', 'ManagersController@destroy')->name('profile.destroy');
+
 });
 
 // Grupo de Rotas do Member
@@ -42,7 +34,7 @@ Route::group(['middleware' => ['auth', 'member'], 'namespace' => 'Member', 'pref
 });
 
 // Personaliza o menu
-// * Não acho necessário criar um controller só pra isso...
+// * Não acho necessário criar um controller só pra isso... c é loco bix olha o tamanho diss
 Route::post('/colors', function(Illuminate\Http\Request $request){
     
     auth()->user()->menu_back_color = $request->back_color;
@@ -69,5 +61,8 @@ Route::post('/colors', function(Illuminate\Http\Request $request){
 
 // Rotas da autentificação
 Auth::routes();
+
+
+
 
 

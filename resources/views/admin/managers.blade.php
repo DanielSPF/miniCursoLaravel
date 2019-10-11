@@ -62,10 +62,8 @@
             Você tem certeza que deseja <strong>excluir</strong> o administrador <br> <strong id="name_del"></strong>?
         </div>
         <div class="modal-footer text-center">
-            <form action="#" method="post"> {{-- Form Delete Adm --}}
-                @csrf
-                @method('DELETE')
-                <input type="hidden" value="" name="id">
+            <form action="{{ route('admin.profile.destroy', Auth::user()->id) }}" method="GET"> {{-- Form Delete Adm --}}
+                
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
                 <button type="submit" class="btn btn-success">Sim</button>
             </form> {{-- end Form --}}
