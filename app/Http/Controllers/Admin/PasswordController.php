@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Hash;
 use Auth;
+use App\Models\User;
 
 class PasswordController extends Controller
 {
@@ -31,6 +32,10 @@ class PasswordController extends Controller
                 'password_current.max' => 'Sua senha deve conter no maximo 30 caracteres.',
             ]
         );
+
+        $user = User::find(Auth::user()->id);
+        $user->password = Hash::make($request->password);
+        $user->save();
 
         return redirect()->back()->with('success', 'Senha atualizada com sucesso!');
     }
